@@ -6,7 +6,7 @@ def sentiment_pie(df):
     plt.pie(
         df["Sentiment"].value_counts(),
         shadow=True,
-        explode=(0.05, 0.06, 0.05),
+        #explode=(0.05, 0.06, 0.05),
         labels=df["Sentiment"].value_counts().index,
         autopct='%1.2f%%'
     );
