@@ -25,7 +25,7 @@ def run():
     with st.form(key='Enter name'):
         search_words = st.text_input(
             label='Enter a topic for the sentiment',
-            value="Arsenal",
+            value="habeeba baioumy",
         )
         number_of_tweets = st.slider(
             'Enter the number of latest tweets for the sentiment(Maximum 5000 tweets)',
@@ -44,10 +44,11 @@ def run():
             count=number_of_tweets,
             save=False
         )
-        returned_df["clean_tweet"] = returned_df.Tweet.apply(lambda tweet: clean_text(tweet))
-        returned_df = sentiment_analysis(returned_df, 'clean_tweet')
 
         if not returned_df.empty:
+            returned_df["clean_tweet"] = returned_df.Tweet.apply(lambda tweet: clean_text(tweet))
+            returned_df = sentiment_analysis(returned_df, 'clean_tweet')
+
             st.write(returned_df)
             data_load_state.success('Data is ready!')
             # Convert results to download
@@ -63,7 +64,8 @@ def run():
             st.pyplot(get_top_tweet_bigrams(returned_df, column_name="clean_tweet", ngram=2, n=10))
             st.pyplot(word_cloud(returned_df, column_name="clean_tweet"))
             st.pyplot(sentiment_pie(returned_df))
-
+        else:
+            data_load_state.success('No Tweets found :(')
 
 if __name__ == '__main__':
     run()
