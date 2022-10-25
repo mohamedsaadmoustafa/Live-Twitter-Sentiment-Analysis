@@ -1,4 +1,6 @@
 import sys
+sys.path.insert(0, 'Visualization')
+
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -9,7 +11,6 @@ from sentiment_pie import *
 from top_tweet_bigrams import *
 from word_cloud import *
 
-sys.path.insert(0, 'Visualization')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.title('Live Twitter Sentiment Analysis')
 st.image('./images/cover.png')
