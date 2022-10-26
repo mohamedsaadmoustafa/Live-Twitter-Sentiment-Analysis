@@ -40,7 +40,7 @@ def run():
     with st.form(key='Enter name'):
         search_words = st.text_input(
             label='Enter a topic for the sentiment',
-            value="habeeba baioumy",
+            value="champions league",
         )
         number_of_tweets = st.slider(
             'Enter the number of latest tweets for the sentiment(Maximum 5000 tweets)',
@@ -52,7 +52,7 @@ def run():
 
     if submit_button:
         msg = f'{datetime.datetime.now()} : {search_words} : {number_of_tweets}'
-        logger.info(msg) #########################################################################################################
+        logger.info(msg)
 
         # Create a text element and let the reader know the data is loading.
         data_load_state = st.info('Loading data.')
