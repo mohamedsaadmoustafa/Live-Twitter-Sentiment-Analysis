@@ -2,6 +2,9 @@
 
 This app uses tweepy to get tweets from twitter based on the input name/phrase. It then processes the tweets through HuggingFace transformers pipeline function for sentiment analysis. The resulting sentiments and corresponding tweets are then put in a dataframe for display which is what you see as result.
 
+## Deploying Demo
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mohamedsaadmoustafa-live-twitter-sentiment-analys-srcapp-6q068p.streamlitapp.com/)
 
 ## Generating access tokens
 Login to your Twitter account on developer.twitter.com. Navigate to the Twitter app dashboard and open the Twitter app for which you would like to generate access tokens. Navigate to the "Keys and Tokens" page. Select 'Create' under the "Access token & access token secret" section.
@@ -73,5 +76,3 @@ Live-Twitter-Sentiment-Analysis
 ```
 
 
-## Deploying Demo
-[Live Twitter Sentiment Analysis Streamlit](https://mohamedsaadmoustafa-live-twitter-sentiment-analys-srcapp-6q068p.streamlitapp.com/)
